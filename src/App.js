@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Submit from './Submit.js'
 
 
 class App extends Component {
@@ -50,23 +51,49 @@ class App extends Component {
          "image": "http://www.outdoor-films.com/sites/default/files/film_poster/180southposter.jpg"
         },
       ],
+      currentPage: "Container"
     }
+    this.changePage = this.changePage.bind(this);
+
   };
 
+  changePage() {
+    this.setState({currentPage: 'Submit'})
+  }
+  // we can totally pass in a path argument here for better future functionality
+  // we will also need to pass down the changePage function to Container
+  // changePage={this.state.changePage}
+
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Movie Recommender</h2>
+    if (this.state.currentPage === "Container") {
+      return (
+        <div className="App">
+          <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2>Movie Recommender</h2>
+          </div>
+          <div className="App-intro">
+            <Container data={this.state.data} changePage={this.changePage}/>
+          </div>
         </div>
-        <div className="App-intro">
-          <Container data={this.state.data} />
+      );
+    } else {
+      return (
+        <div className="App">
+          <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2>Movie Recommender</h2>
+          </div>
+          <div className="App-intro">
+            <Submit />
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
+
+// At the App-intro we want to either render Container or Submit
 
 class Container extends Component {
   constructor(props) {
