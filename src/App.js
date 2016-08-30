@@ -106,6 +106,11 @@ class Container extends Component {
     return Math.floor(dataLength * Math.random());
   };
 
+  handleClick() {
+    console.log('this is', this);
+    this.props.changePage()
+  }
+
   render() {
     var temp = this.randIdx();
     return (
@@ -120,7 +125,8 @@ class Container extends Component {
           <Rating rating={this.props.data[temp].rating} />
         </div>
         <p>
-          <a href="/submit">Submit movie</a> ~ <a href="/">Get Movie Recommendation.</a>
+          <button onClick={this.handleClick.bind(this)}>Peh</button>
+          <a href="">Submit movie</a> ~ <a href="/">Get Movie Recommendation.</a>
         </p>
       </div>
     );

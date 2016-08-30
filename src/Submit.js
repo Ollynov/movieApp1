@@ -8,7 +8,7 @@ class Submit extends Component {
   }
 
   render() {
-    var temp = this.randIdx();
+
     return (
       <div id='container'>
         <div>
