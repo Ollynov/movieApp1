@@ -1,4 +1,63 @@
-Below you will find some information on how to perform common tasks.  
+<!--
+////////////////////
+MVP V1. Deadline 3:30
+Our movie app will allow a user to enter homescreen and see title,
+picture of a random movie, the rating of that movie (number from 1-10), and two buttons under photo:
+"Im feeling lucky" button will just reload the page
+"Submit movie" will take you to the submit.html (blank html page for MVP)
+
+SETUP
+-package.json √
+- npm install dependencies √
+- install eslint √
+- file structure process file, compiled file, (views file holding components), server config file, data.json file √
+
+RENDERING
+index.html (homepage)
+submit.html
+
+NOTES:
+- render first movie to homepage (image, title, rating number)
+- render submit page
+- initial movie image can be stored in a json file rather than database
+
+////////////////////
+MVP V2.0 7:00PM deadline
+submit.html
+User sees a brief text overview of how legit of a movie they need to submit
+they then submit title
+ - submit number rating
+ - submit url of image
+
+ 9:00PM deadline re-render page with a random image from JSON data file
+ Looking decent as well
+
+
+///////////////
+MVP V3.0
+setup: add minification in gulp
+feature add: "display all" button that displays all movies and their ratings in a dropdown (implement the map function)
+improvement: change number rating to a star rating
+authentication: signup
+database: move from json to actual database
+deploy: to live
+
+
+/////////////////////
+MVP V4.0
+feature add:
+improvement: Make it look sexy
+improvement: allow signed in users to mark a movie as "viewed" or not.
+improvement: allow signed in users to view "all" or just "never seen"
+
+
+
+
+
+
+
+
+Below you will find some information on how to perform common tasks.
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/template/README.md).
 
 ## Table of Contents
@@ -76,10 +135,10 @@ For the project to build, **these files must exist with exact filenames**:
 
 You can delete or rename the other files.
 
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.  
+You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.
 You need to **put any JS and CSS files inside `src`**, or Webpack won’t see them.
 
-You can, however, create more top-level directories.  
+You can, however, create more top-level directories.
 They will not be included in the production build so you can use them for things like documentation.
 
 ## Available Scripts
@@ -139,7 +198,7 @@ Then make sure `package.json` of your project ends with this block:
 }
 ```
 
-Projects generated with `react-scripts@0.2.0` and higher should already have it.  
+Projects generated with `react-scripts@0.2.0` and higher should already have it.
 If you don’t need ESLint integration with your editor, you can safely delete those three lines from your `package.json`.
 
 Finally, you will need to install some packages *globally*:
@@ -160,7 +219,7 @@ npm install --save <library-name>
 
 ## Importing a Component
 
-This project setup supports ES6 modules thanks to Babel.  
+This project setup supports ES6 modules thanks to Babel.
 While you can still use `require()` and `module.exports`, we encourage you to use [`import` and `export`](http://exploringjs.com/es6/ch_modules.html) instead.
 
 For example:
@@ -468,7 +527,7 @@ Check out [this tutorial](https://www.fullstackreact.com/articles/using-create-r
 
 >Note: this feature is available with `react-scripts@0.2.3` and higher.
 
-People often serve the front-end React app from the same host and port as their backend implementation.  
+People often serve the front-end React app from the same host and port as their backend implementation.
 For example, a production setup might look like this after the app is deployed:
 
 ```
@@ -495,7 +554,7 @@ Fetch API cannot load http://localhost:4000/api/todos. No 'Access-Control-Allow-
 
 Keep in mind that `proxy` only has effect in development (with `npm start`), and it is up to you to ensure that URLs like `/api/todos` point to the right thing in production. You don’t have to use the `/api` prefix. Any unrecognized request will be redirected to the specified `proxy`.
 
-Currently the `proxy` option only handles HTTP requests, and it won’t proxy WebSocket connections.  
+Currently the `proxy` option only handles HTTP requests, and it won’t proxy WebSocket connections.
 If the `proxy` option is **not** flexible enough for you, alternatively you can:
 
 * Enable CORS on your server ([here’s how to do it for Express](http://enable-cors.org/server_expressjs.html)).
@@ -503,7 +562,7 @@ If the `proxy` option is **not** flexible enough for you, alternatively you can:
 
 ## Deployment
 
-By default, Create React App produces a build assuming your app is hosted at the server root.  
+By default, Create React App produces a build assuming your app is hosted at the server root.
 To override this, specify the `homepage` in your `package.json`, for example:
 
 ```js
@@ -518,7 +577,7 @@ See [this example](https://github.com/xkawi/create-react-app-now) for a zero-con
 
 ### Heroku
 
-Use the [Heroku Buildpack for Create React App](https://github.com/mars/create-react-app-buildpack).  
+Use the [Heroku Buildpack for Create React App](https://github.com/mars/create-react-app-buildpack).
 You can find instructions in [Deploying React with Zero Configuration](https://blog.heroku.com/deploying-react-with-zero-configuration).
 
 ### Surge
@@ -552,7 +611,7 @@ Open your `package.json` and add a `homepage` field:
   "homepage": "http://myusername.github.io/my-app",
 ```
 
-**The above step is important!**  
+**The above step is important!**
 Create React App uses the `homepage` field to determine the root URL in the built HTML file.
 
 Now, whenever you run `npm run build`, you will see a cheat sheet with a sequence of commands to deploy to GitHub pages:

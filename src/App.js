@@ -9,12 +9,22 @@ class App extends Component {
     this.state = {
       data: [
         {
-         title: 'Batman',
-         rating: 10,
-         image: 'http://screencrave.com/wp-content/uploads/2012/07/Batman-The-Dark-Knight-Rises.jpg'
+         "title": "Requiem for a Dream",
+         "rating": 8,
+         "image": "https://upload.wikimedia.org/wikipedia/en/9/92/Requiem_for_a_dream.jpg"
+        },
+        {
+         "title": "Batman",
+         "rating": 10,
+         "image": "http://screencrave.com/wp-content/uploads/2012/07/Batman-The-Dark-Knight-Rises.jpg"
+        },
+        {
+         "title": "Schindler's List",
+         "rating": 10,
+         "image": "http://ia.media-imdb.com/images/M/MV5BMzMwMTM4MDU2N15BMl5BanBnXkFtZTgwMzQ0MjMxMDE@._V1_UY1200_CR73,0,630,1200_AL_.jpg"
         }
-      ]
-    };
+      ],
+    }
   };
 
   render() {
@@ -37,13 +47,13 @@ class Container extends Component {
     return (
       <div id='container'>
         <div>
-          <Title title={this.props.data[0].title} />
+          <Title title={this.props.data[2].title} />
         </div>
         <div>
-          <Image title={this.props.data[0].image} />
+          <Image image={this.props.data[2].image} />
         </div>
         <div>
-          <Rating title={this.props.data[0].rating} />
+          <Rating rating={this.props.data[2].rating} />
         </div>
         <p>
           <a href="/submit">Submit movie</a> ~ <a href="/">Get Movie Recommendation.</a>
