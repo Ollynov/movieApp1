@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-
+//var data = require('data/data.js')
+// data={data}
 ReactDOM.render(
-  <App data={data}/>,
+  <App />,
   document.getElementById('root')
 );

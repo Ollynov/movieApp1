@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -43,17 +44,28 @@ class App extends Component {
 }
 
 class Container extends Component {
+  constructor(props) {
+    super(props)
+
+  }
+
+  randIdx() {
+    var dataLength = this.props.data.length;
+    return Math.floor(dataLength * Math.random());
+  };
+
   render() {
+    var temp = this.randIdx();
     return (
       <div id='container'>
         <div>
-          <Title title={this.props.data[2].title} />
+          <Title title={this.props.data[temp].title} />
         </div>
         <div>
-          <Image image={this.props.data[2].image} />
+          <Image image={this.props.data[temp].image} />
         </div>
         <div>
-          <Rating rating={this.props.data[2].rating} />
+          <Rating rating={this.props.data[temp].rating} />
         </div>
         <p>
           <a href="/submit">Submit movie</a> ~ <a href="/">Get Movie Recommendation.</a>
