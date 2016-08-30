@@ -57,8 +57,8 @@ class App extends Component {
 
   };
 
-  changePage() {
-    this.setState({currentPage: 'Submit'})
+  changePage(path) {
+    this.setState({currentPage: path})
   }
   // we can totally pass in a path argument here for better future functionality
   // we will also need to pass down the changePage function to Container
@@ -107,8 +107,7 @@ class Container extends Component {
   };
 
   handleClick() {
-    console.log('this is', this);
-    this.props.changePage()
+    this.props.changePage('Submit')
   }
 
   render() {
