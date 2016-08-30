@@ -54,11 +54,22 @@ class App extends Component {
       currentPage: "Container"
     }
     this.changePage = this.changePage.bind(this);
+    this.addMovie = this.addMovie.bind(this);
 
   };
 
+  addMovie(movie) {
+    var newMovieArr = this.state.data;
+    newMovieArr = newMovieArr.concat(movie);
+    console.log(newMovieArr)
+    //this.setState({data: newMovieArr});
+  }
+
+  // throw this as a prop when instantiating Submit addMovie={this.addMovie}
+
   changePage(path) {
     this.setState({currentPage: path})
+    console.log('and the path passed into changePath is: ', path);
   }
   // we can totally pass in a path argument here for better future functionality
   // we will also need to pass down the changePage function to Container
@@ -85,7 +96,7 @@ class App extends Component {
             <h2>Movie Recommender</h2>
           </div>
           <div className="App-intro">
-            <Submit />
+            <Submit addMovie={this.addMovie}/>
           </div>
         </div>
       );
@@ -107,7 +118,8 @@ class Container extends Component {
   };
 
   handleClick() {
-    this.props.changePage('Submit')
+    console.log('args:', arguments[0]);
+    this.props.changePage(arguments[0]);
   }
 
   render() {
@@ -124,8 +136,8 @@ class Container extends Component {
           <Rating rating={this.props.data[temp].rating} />
         </div>
         <p>
-          <button onClick={this.handleClick.bind(this)}>Peh</button>
-          <a href="">Submit movie</a> ~ <a href="/">Get Movie Recommendation.</a>
+          <button onClick={this.handleClick.bind(this, "Submit")}>Submit Movie</button>
+          <button onClick={this.handleClick.bind(this, "Container")}>Get Recommendation</button>
         </p>
       </div>
     );
