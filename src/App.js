@@ -15,15 +15,40 @@ class App extends Component {
          "image": "https://upload.wikimedia.org/wikipedia/en/9/92/Requiem_for_a_dream.jpg"
         },
         {
-         "title": "Batman",
+         "title": "The Dark Knight",
          "rating": 10,
-         "image": "http://screencrave.com/wp-content/uploads/2012/07/Batman-The-Dark-Knight-Rises.jpg"
+         "image": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UY1200_CR90,0,630,1200_AL_.jpg"
         },
         {
-         "title": "Schindler's List",
-         "rating": 10,
-         "image": "http://ia.media-imdb.com/images/M/MV5BMzMwMTM4MDU2N15BMl5BanBnXkFtZTgwMzQ0MjMxMDE@._V1_UY1200_CR73,0,630,1200_AL_.jpg"
-        }
+         "title": "Life of Pi",
+         "rating": 9,
+         "image": "https://resizing.flixster.com/HV4X3qg7u_pfw7eUpQPk-Tn0CPs=/fit-in/800x1200/v1.bTsxMTE3MTcwMDtqOzE3MTM5OzEyMDA7ODAwOzEyMDA"
+        },
+        {
+         "title": "Silver Linings Playbook",
+         "rating": 9,
+         "image": "https://upload.wikimedia.org/wikipedia/en/9/9a/Silver_Linings_Playbook_Poster.jpg"
+        },
+        {
+         "title": "Shutter Island",
+         "rating": 9,
+         "image": "http://ia.media-imdb.com/images/M/MV5BMTMxMTIyNzMxMV5BMl5BanBnXkFtZTcwOTc4OTI3Mg@@._V1_UY1200_CR83,0,630,1200_AL_.jpg"
+        },
+        {
+         "title": "Inception",
+         "rating": 9,
+         "image": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX640_SY720_.jpg"
+        },
+        {
+         "title": "World of Tomorrow",
+         "rating": 7,
+         "image": "http://www.larsenonfilm.com/wp-content/uploads/2015/07/world-of-tomorrow-review.jpg"
+        },
+        {
+         "title": "180 Degrees South",
+         "rating": 7,
+         "image": "http://www.outdoor-films.com/sites/default/files/film_poster/180southposter.jpg"
+        },
       ],
     }
   };
