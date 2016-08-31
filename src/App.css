@@ -14,13 +14,19 @@ h2 {
 body {
   background-color: #4ABDAC;
   color: #DFDCE3;
-}
+/*  font-size: 30px;
+*/}
 
 .App-header {
   background-color: #F7B733;
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+.rating {
+  color: red;
+  font-size: 30px;
 }
 
 .App-intro {

@@ -6,14 +6,29 @@ var app = express();
 
 app.set('port', 5000);
 
-app.get('/api/comments', function(req, res) {
-  fs.readFile(COMMENTS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    res.json(JSON.parse(data));
-  });
+var allowCrossDomain = function(req, res, next) { //enable CORS
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+  res.header('Access-Control-Max-Age', 10);
+  // intercept OPTIONS method
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+};
+
+app.options('/', function(req, res) {
+  console.log('ok we got an OPTIONS request')
+	res.send("Response back from the server for options requests")
+})
+
+
+app.post('/', function(req, res) {
+  console.log('ok we got a POST request')
+  allowCrossDomain(req, res);
+	res.send("Response back from the server for POST requests")
 });
 
 app.listen(5000, function() {

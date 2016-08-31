@@ -158,8 +158,8 @@ var Image = ({image}) => (
 )
 
 var Rating = ({rating}) => (
-  <div id="rating">
-    <p>{rating}</p>
+  <div>
+    <p id="rating">rating: {rating}</p>
   </div>
 )
 
