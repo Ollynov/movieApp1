@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Submit from './Submit.js'
-
+//var server = require('./server.js')
 
 class App extends Component {
   constructor(props) {
@@ -61,8 +61,9 @@ class App extends Component {
   addMovie(movie) {
     var newMovieArr = this.state.data;
     newMovieArr = newMovieArr.concat(movie);
-    console.log(newMovieArr)
-    //this.setState({data: newMovieArr});
+    //console.log(newMovieArr)
+    this.setState({data: newMovieArr});
+    console.log(this.state.data)
   }
 
   // throw this as a prop when instantiating Submit addMovie={this.addMovie}

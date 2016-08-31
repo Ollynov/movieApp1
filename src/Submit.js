@@ -11,8 +11,29 @@ class Submit extends Component {
     }
   }
 
+
+
+
+
+
   handleSubmit(e) {
     e.preventDefault();
+    console.log('this is e ', e)
+
+    $.ajax({
+      type: "POST",
+      url: 'http://localhost:5000/',
+      data: {peh: 'nyooo'},
+      success: function(data) {
+        console.log(data);
+      },
+      error: function(err) {
+        console.log(err);
+      }
+
+      //dataType: dataType
+    });
+
 
     this.props.addMovie({
      "title": "TESTER!!!!",
