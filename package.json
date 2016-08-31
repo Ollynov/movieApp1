@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,5 +18,8 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
+  },
+  "engines" : {
+    "node" : "0.12.x"
   }
 }
